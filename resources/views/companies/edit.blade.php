@@ -5,7 +5,7 @@
   <div class="row col-md-9 col-lg-9 col-sm-9 pull-left">
         <!-- Example row of columns -->
         <div class="row col-md-12 col-12 col-sm-12" style="background:white; margin:10px;"> 
-            <form class="col-md-12 col-12 col-sm-12" method="post" action="{{ route('companies.update', ['$company->id']) }}">
+            <form class="col-md-12 col-12 col-sm-12" method="post" action="{{ route('companies.update', [$company->id]) }}">
                 {{ csrf_field() }}
 
                 <input type="hidden" name="_method" value="put">
