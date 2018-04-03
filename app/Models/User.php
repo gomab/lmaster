@@ -36,10 +36,11 @@ class User extends Authenticatable
 
     /**
      * User has many tasks
-     */
+     
     public function tasks(){
         Return $this->hasMany('App\Models\Task');
     }
+    */
 
     /**
      * User has many comments
@@ -60,5 +61,20 @@ class User extends Authenticatable
      */
     public function companies(){
         Return $this->hasMany('App\Models\Company');
+    }
+
+    
+    /**
+     * a user belongs to many tasks
+     */
+    public function tasks(){
+        Return $this->belongsToMany('App\Models\Task');
+    }
+
+    /**
+     * a user belongs to many projects
+     */
+    public function projects(){
+        Return $this->belongsToMany('App\Models\project');
     }
 }

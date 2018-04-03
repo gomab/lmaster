@@ -23,9 +23,9 @@ class Project extends Model
     }
 
     /**
-     * a project belongs to a user
+     * a project belongs to many users
      */
-    public function user(){
-        Return $this->belongsTo('App\Models\User');
+    public function users(){
+        Return $this->belongsToMany('App\Models\User');
     }
 }
