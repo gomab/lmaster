@@ -42,7 +42,30 @@
             <h4>Action</h4>
             <ol class="list-unstyled">
               <li><a href="/companies/{{ $company->id }}/edit">Edit</a></li>
-              <li><a href="#">Delete</a></li>
+              
+              <li>
+                <a href="#"
+                onclick="
+                let result = confirm('Etes vous sur de vouloir supprimer ce projet?');
+                  if(result){
+                    event.preventDefault();
+                    document.getElementById('delete-form').submit();
+                  }
+                "
+                >Delete</a>
+
+                <form id="delete-form" action="{{ route('companies.destroy', [$company->id]) }}" 
+                  method="post" style="display: none;">
+
+                    <input type="hidden" name="_method" value="delete">
+                    {{ csrf_field() }}
+
+                </form>
+
+              </li>
+
+
+              <!-- <li><a href="#">Delete</a></li>-->
                <li><a href="#">Add new member</a></li>
             </ol>
           </div>
