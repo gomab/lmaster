@@ -65,6 +65,9 @@ class CompaniesController extends Controller
     public function edit(Company $company)
     {
         //
+        $company = Company::find($company->id);
+
+        return view('companies.edit', ['company' => $company]);
     }
 
     /**
@@ -76,8 +79,21 @@ class CompaniesController extends Controller
      */
     public function update(Request $request, Company $company)
     {
-        //
-    }
+        //Save data
+        $companyUpdate = Company::where('id', $company->id)
+                                ->update([
+                                    'name' => $request->input('name'),
+                                    'description' => $request->input('description')
+                                ]);
+        
+        if($companyUpdate){
+            return redirect('companies.show', ['company' => $company->id])
+                ->with('success', 'company updated successfully');
+        }                        
+
+        //Redirect
+        return back()->withInput();
+        }
 
     /**
      * Remove the specified resource from storage.

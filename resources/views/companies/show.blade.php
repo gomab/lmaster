@@ -2,7 +2,7 @@
 
 @section('content')
      
-  <div class="col-md-9 col-lg-9 col-sm-3 pull-left">
+  <div class="col-md-9 col-lg-9 col-sm-9 pull-left">
       <main role="main">
 
       <!-- Main jumbotron for a primary marketing message or call to action -->
@@ -41,7 +41,7 @@
             <div class="sidebar-module">
             <h4>Action</h4>
             <ol class="list-unstyled">
-              <li><a href="#">Edit</a></li>
+              <li><a href="/companies/{{ $company->id }}/edit">Edit</a></li>
               <li><a href="#">Delete</a></li>
                <li><a href="#">Add new member</a></li>
             </ol>
