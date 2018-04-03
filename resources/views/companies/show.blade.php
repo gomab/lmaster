@@ -2,7 +2,8 @@
 
 @section('content')
      
-    <main role="main">
+  <div class="col-md-9 col-lg-9 col-sm-3 pull-left">
+      <main role="main">
 
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
@@ -15,7 +16,7 @@
 
       <div class="container">
         <!-- Example row of columns -->
-       <div class="row"> 
+       <div class="row" style="background:white; margin:10px;"> 
         @foreach ($company->projects as $project )
             
             <div class="col-md-4">
@@ -32,4 +33,29 @@
       </div> <!-- /container -->
 
     </main>
+  </div>
+
+    <div class="col-sm-3 col-md-3 col-lg-3 pull-right">
+    
+          <div class="sidebar-module sidebar-module-inset">
+            <div class="sidebar-module">
+            <h4>Action</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">Edit</a></li>
+              <li><a href="#">Delete</a></li>
+               <li><a href="#">Add new member</a></li>
+            </ol>
+          </div>
+          <div class="sidebar-module">
+            <h4>Members</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">March 2014</a></li>
+              <li><a href="#">February 2014</a></li>
+              <li><a href="#">January 2014</a></li>
+              <li><a href="#">December 2013</a></li>
+              <li><a href="#">November 2013</a></li>
+            </ol>
+          </div>
+         
+        </div>
 @endsection
