@@ -22,6 +22,7 @@ class User extends Authenticatable
         'middle_name',
         'last_name',
         'city',
+        'role_id'
     ];
 
     /**
@@ -32,4 +33,32 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * User has many tasks
+     */
+    public function tasks(){
+        Return $this->hasMany('App\Models\Task');
+    }
+
+    /**
+     * User has many comments
+     */
+    public function comments(){
+        Return $this->hasMany('App\Models\Comment');
+    }
+
+    /**
+     * a role belongs to a user
+     */
+    public function role(){
+        Return $this->belongsTo('App\Models\Role');
+    }
+
+    /**
+     * User as many companies
+     */
+    public function companies(){
+        Return $this->hasMany('App\Models\Company');
+    }
 }
