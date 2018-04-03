@@ -13,10 +13,17 @@ class Company extends Model
         'user_id',
     ];
 
-     /**
+    /**
      * a campany belongs to a user
      */
     public function user(){
         Return $this->belongsTo('App\Models\User');
+    }
+
+    /**
+     * a campany as many projects
+     */
+    public function projects(){
+        Return $this->hasMany('App\Models\Project');
     }
 }
