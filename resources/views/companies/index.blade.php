@@ -22,7 +22,7 @@
 
                 <ul class="list-group">
                 @foreach ($companies as $company )
-                        <li class="list-group-item">{{ $company->name }}</li>
+                        <li class="list-group-item"><a href="/companies/{{ $company->id }}">{{ $company->name }}</a></li>
                 @endforeach
                 
                 </ul>
