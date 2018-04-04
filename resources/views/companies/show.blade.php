@@ -41,8 +41,12 @@
             <div class="sidebar-module">
             <h4>Action</h4>
             <ol class="list-unstyled">
+              <li><a href="/companies">List of companies</a></li>
               <li><a href="/companies/{{ $company->id }}/edit">Edit</a></li>
+              <li><a href="/projects/create">Add New Project</a></li>
+              <li><a href="/companies/create">Create New Companies</a></li>
               
+              <br>
               <li>
                 <a href="#"
                 onclick="

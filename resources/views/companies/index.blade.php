@@ -17,6 +17,8 @@
         <div class="card card-primary">
             <div class="card-header">
                 Companies
+
+               <a  class="pull-right btn btn-primary btn-sm" href="/companies/create">Create new Companies</a>
             </div>
             <div class="card-body">
 
