@@ -16,6 +16,7 @@
 
       <div class="container">
         <!-- Example row of columns -->
+        <a class="pull-left btn btn-primary btn-sm" href="/projects/create">Add New Project</a>
        <div class="row" style="background:white; margin:10px;"> 
         @foreach ($company->projects as $project )
             
