@@ -17,7 +17,7 @@ class Company extends Model
      * a campany belongs to a user
      */
     public function user(){
-        Return $this->belongsTo('App\Models\User');
+        Return $this->belongsTo('App\User');
     }
 
     /**

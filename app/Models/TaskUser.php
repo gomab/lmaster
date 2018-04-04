@@ -16,6 +16,6 @@ class TaskUser extends Model
      * a task belongs to many users
      */
     public function users(){
-        Return $this->belongsToMany('App\Models\User');
+        Return $this->belongsToMany('App\User');
     }
 }

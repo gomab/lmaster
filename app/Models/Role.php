@@ -15,6 +15,6 @@ class Role extends Model
      * A role has many users
      */
     public function users(){
-        Return $this->hasMany('App\Models\User');
+        Return $this->hasMany('App\User');
     }
 }

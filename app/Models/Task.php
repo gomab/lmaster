@@ -20,7 +20,7 @@ class Task extends Model
      * a task belongs to a user
      */
     public function user(){
-        Return $this->belongsTo('App\Models\User');
+        Return $this->belongsTo('App\User');
     }
 
     /**
@@ -41,6 +41,6 @@ class Task extends Model
      * a task belongs to many users
      */
     public function users(){
-        Return $this->belongsToMany('App\Models\User');
+        Return $this->belongsToMany('App\User');
     }
 }

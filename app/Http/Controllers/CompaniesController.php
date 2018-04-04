@@ -55,7 +55,7 @@ class CompaniesController extends Controller
         }
 
           //Redirect
-          return back()->withInput()->with('errors', 'Error creating new company'); 
+          return back()->withInput()->with('error', 'Error creating new company'); 
     }
 
     /**
